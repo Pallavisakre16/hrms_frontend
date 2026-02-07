@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+/* Modern styles */
+body { 
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  @apply bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 min-h-screen;
+}
+
+/* Smooth transitions */
+* {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+/* Gradient text */
+.gradient-text {
+  @apply bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent;
+}
+
+/* Glass morphism effect */
+.glass {
+  @apply bg-white/80 backdrop-blur-xl border border-white/20 shadow-xl;
+}
+
+/* Card hover effect */
+.card-hover {
+  @apply hover:shadow-2xl hover:scale-105 hover:-translate-y-1;
+}
+
+/* Loading animation */
+@keyframes pulse-slow {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Input focus effect */
+input:focus, select:focus {
+  @apply ring-2 ring-blue-400/50 ring-offset-2;
+}
+
+/* Button smooth press effect */
+button:active {
+  @apply scale-95;
+}
